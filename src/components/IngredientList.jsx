@@ -7,13 +7,13 @@ const IngredientList = (props) => {
       <h2>{props.title}</h2>
       {props.ingredient.length ? (
         <ul>
-          {props.ingredient.map((item) => (
-            <li key={item.name} style={{ backgroundColor: item.color }}>
+          {props.ingredient.map((item, index) => (
+            <li key={index} style={{ backgroundColor: item.color }}>
               <p>{item.name}</p>
               {props.handleAddItem ? (
                 <button onClick={() => props.handleAddItem(item)}>+</button>
               ) : (
-                <button onClick={() => props.handleRemoveItem(item)}>X</button>
+                <button onClick={() => props.handleRemoveItem(index)}>X</button>
               )}
             </li>
           ))}
