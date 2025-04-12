@@ -19,15 +19,13 @@ const BurgerStack = () => {
     { name: "Swiss Cheese", color: "#F1E1A8" },
   ];
 
-  // const [ingredientsChart, setIngredientsChart] =
-  //   useState(availableIngredients);
   const [ingredientsMake, setIngredientsMake] = useState([]);
 
   const handleAddItem = (item) => {
     setIngredientsMake([...ingredientsMake, item]);
   };
 
-  const handleRemoveItem = (item) => {
+  const handleRemoveItem = (indexToRemove) => {
     setIngredientsMake(
       ingredientsMake.filter((_, index) => index !== indexToRemove)
     );
@@ -36,7 +34,26 @@ const BurgerStack = () => {
   return (
     <main>
       <h1>Burger Stacker</h1>
-      <section className="selection">
+
+      <div className="top-row">
+        <div className="ingredient-list">
+          <h2>Ingredient List</h2>
+          <IngredientList
+            ingredient={availableIngredients}
+            handleAddItem={handleAddItem}
+          />
+        </div>
+
+        <div className="ingredients-make">
+          <h2>Ingredients Make</h2>
+          <IngredientList
+            ingredient={ingredientsMake}
+            handleRemoveItem={handleRemoveItem}
+          />
+        </div>
+      </div>
+
+      {/* <section className="selection">
         <IngredientList
           title="Ingredient List"
           ingredient={availableIngredients}
@@ -47,8 +64,7 @@ const BurgerStack = () => {
           ingredient={ingredientsMake}
           handleRemoveItem={handleRemoveItem}
         />
-      </section>
-      {/* <li style={{ backgroundColor: ingredient.color }}>{ingredient.name}</li> */}
+      </section> */}
     </main>
   );
 };
