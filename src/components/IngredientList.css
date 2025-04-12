@@ -23,6 +23,7 @@ body,
   margin: 0;
   height: 100%;
   overflow-x: hidden;
+  background-color: #000000;
 }
 
 main {
@@ -75,4 +76,18 @@ button {
   border-radius: 8px;
   background-color: #1a1a1a;
   border: 1px solid transparent;
+  color: white;
+}
+
+h1,
+.ingredient-list {
+  color: white;
+}
+
+.top-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 250px;
+  color: white;
 }
