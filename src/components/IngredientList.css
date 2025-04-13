@@ -23,7 +23,7 @@ body,
   margin: 0;
   height: 100%;
   overflow-x: hidden;
-  background-color: #000000;
+  background-color: rgb(46, 43, 43);
 }
 
 main {
@@ -44,6 +44,8 @@ section {
 
 h1 {
   text-align: center;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 ul {
@@ -79,15 +81,20 @@ button {
   color: white;
 }
 
-h1,
-.ingredient-list {
-  color: white;
-}
-
 .top-row {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
   gap: 250px;
   color: white;
+  font-size: 14px;
+}
+
+h2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 18px;
+  width: 300px;
+  margin-left: 25%;
 }
