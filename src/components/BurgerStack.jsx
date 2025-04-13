@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import IngredientList from "./IngredientList";
+import "./IngredientList.css";
 
 const BurgerStack = () => {
   const availableIngredients = [
@@ -35,7 +36,7 @@ const BurgerStack = () => {
     <main>
       <h1>Burger Stacker</h1>
 
-      <div className="top-row">
+      <section className="top-row">
         <div className="ingredient-list">
           <h2>Ingredient List</h2>
           <IngredientList
@@ -51,20 +52,7 @@ const BurgerStack = () => {
             handleRemoveItem={handleRemoveItem}
           />
         </div>
-      </div>
-
-      {/* <section className="selection">
-        <IngredientList
-          title="Ingredient List"
-          ingredient={availableIngredients}
-          handleAddItem={handleAddItem}
-        />
-        <IngredientList
-          title="Ingredients Make"
-          ingredient={ingredientsMake}
-          handleRemoveItem={handleRemoveItem}
-        />
-      </section> */}
+      </section>
     </main>
   );
 };
