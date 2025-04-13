@@ -4,7 +4,6 @@ import "./IngredientList.css";
 const IngredientList = (props) => {
   return (
     <div className="ingredient-list">
-      <h2>{props.title}</h2>
       {props.ingredient.length ? (
         <ul>
           {props.ingredient.map((item, index) => (
